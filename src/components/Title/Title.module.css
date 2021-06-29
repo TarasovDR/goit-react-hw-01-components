@@ -1,0 +1,14 @@
+.title {
+  width: 468px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: #fff;
+  text-transform: uppercase;
+}
+
+/* .title + .statList {
+} */
