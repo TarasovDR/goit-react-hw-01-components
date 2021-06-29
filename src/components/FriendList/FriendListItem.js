@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import defaultImage from '../../images/default-avatar.png';
 import s from './FriendList.module.css';
 
-const FriendListItem = ({ avatar = defaultImage, name, isOnline }) => {
+const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <li className={s.friendItem}>
       <span className={isOnline ? s.isOnline : s.isOffline}></span>
@@ -11,6 +11,10 @@ const FriendListItem = ({ avatar = defaultImage, name, isOnline }) => {
       <p className={s.name}>{name}</p>
     </li>
   );
+};
+
+FriendListItem.defaultProps = {
+  avatar: defaultImage,
 };
 
 FriendListItem.propTypes = {

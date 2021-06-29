@@ -3,15 +3,7 @@ import PropTypes from 'prop-types';
 import defaultImage from '../../images/default-avatar.png';
 import s from './Profile.module.css';
 
-const Profile = ({
-  avatar = defaultImage,
-  name,
-  tag,
-  location,
-  followers,
-  views,
-  likes,
-}) => {
+const Profile = ({ avatar, name, tag, location, followers, views, likes }) => {
   return (
     <div className={s.profile}>
       <div className={s.description}>
@@ -37,6 +29,10 @@ const Profile = ({
       </ul>
     </div>
   );
+};
+
+Profile.defaultProps = {
+  avatar: defaultImage,
 };
 
 Profile.propTypes = {
